@@ -41,15 +41,20 @@ const Navigation = () => {
         isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container-custom">
+      <div className="container-custom px-4">
         <div className="flex items-center justify-between h-16">
           {/* Brand Name */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex items-center"
           >
-            <h1 className="font-display font-bold text-2xl text-brand-dark">
-              Rhianna Tyres
+            <h1
+              className={`font-display font-bold text-lg sm:text-xl md:text-2xl transition-colors duration-300 ${
+                isScrolled ? "text-brand-dark" : "text-white"
+              }`}
+            >
+              <span className="hidden xs:inline">Rhianna Tyres</span>
+              <span className="xs:hidden">RT</span>
             </h1>
           </motion.div>
 
@@ -59,7 +64,9 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="font-medium transition-colors duration-300 hover:text-orange-500 text-gray-700"
+                className={`font-medium transition-colors duration-300 hover:text-orange-500 ${
+                  isScrolled ? "text-gray-700" : "text-white"
+                }`}
               >
                 {item.name}
               </button>
@@ -67,24 +74,32 @@ const Navigation = () => {
           </div>
 
           {/* Right side buttons */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             {/* Call button */}
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="tel:+441234567890"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-2 text-sm"
+              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-2 sm:px-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm"
             >
-              <Phone size={16} />
+              <Phone size={14} className="sm:w-4 sm:h-4" />
               <span className="hidden sm:inline">Call Now</span>
             </motion.a>
 
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg transition-colors duration-300 text-gray-700 hover:bg-gray-200"
+              className={`lg:hidden p-1.5 sm:p-2 rounded-lg transition-all duration-300 ${
+                isScrolled
+                  ? "text-gray-700 hover:bg-gray-200"
+                  : "text-white hover:bg-white/20 bg-black/20"
+              }`}
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? (
+                <X size={20} className="sm:w-6 sm:h-6" />
+              ) : (
+                <Menu size={20} className="sm:w-6 sm:h-6" />
+              )}
             </button>
           </div>
         </div>

@@ -50,7 +50,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900 pt-16"
     >
       {/* Background with tire pattern overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-brand-dark to-gray-800">
