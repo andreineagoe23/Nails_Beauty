@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/RhiannaTyres/static/css/main.483c9558.css",
+    "main.js": "/RhiannaTyres/static/js/main.86c405f1.js",
+    "index.html": "/RhiannaTyres/index.html",
+    "main.483c9558.css.map": "/RhiannaTyres/static/css/main.483c9558.css.map",
+    "main.86c405f1.js.map": "/RhiannaTyres/static/js/main.86c405f1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.483c9558.css",
+    "static/js/main.86c405f1.js"
+  ]
+}
