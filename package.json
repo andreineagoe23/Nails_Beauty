@@ -1,8 +1,8 @@
 {
-  "name": "rhianna-tyres-website",
+  "name": "cc-nails-beauty-website",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://andreineagoe23.github.io/RhiannaTyres",
+  "homepage": "https://andreineagoe23.github.io/Nails_Beauty",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",

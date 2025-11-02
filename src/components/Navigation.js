@@ -50,11 +50,11 @@ const Navigation = () => {
           >
             <h1
               className={`font-display font-bold text-lg sm:text-xl md:text-2xl transition-colors duration-300 ${
-                isScrolled ? "text-brand-dark" : "text-white"
+                isScrolled ? "text-gray-900" : "text-gray-900"
               }`}
             >
-              <span className="hidden xs:inline">Rhianna Tyres</span>
-              <span className="xs:hidden">RT</span>
+              <span className="hidden xs:inline">C&C Nails and Beauty</span>
+              <span className="xs:hidden">C&C</span>
             </h1>
           </motion.div>
 
@@ -64,8 +64,8 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`font-medium transition-colors duration-300 hover:text-orange-500 ${
-                  isScrolled ? "text-gray-700" : "text-white"
+                className={`font-medium transition-colors duration-300 hover:text-pink-500 ${
+                  isScrolled ? "text-gray-700" : "text-gray-800"
                 }`}
               >
                 {item.name}
@@ -79,8 +79,8 @@ const Navigation = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="tel:+441234567890"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-2 sm:px-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm"
+              href="tel:+442012345678"
+              className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-2 sm:px-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm"
             >
               <Phone size={14} className="sm:w-4 sm:h-4" />
               <span className="hidden sm:inline">Call Now</span>
@@ -92,7 +92,7 @@ const Navigation = () => {
               className={`lg:hidden p-1.5 sm:p-2 rounded-lg transition-all duration-300 ${
                 isScrolled
                   ? "text-gray-700 hover:bg-gray-200"
-                  : "text-white hover:bg-white/20 bg-black/20"
+                  : "text-gray-800 hover:bg-pink-50"
               }`}
             >
               {isMobileMenuOpen ? (
@@ -114,12 +114,12 @@ const Navigation = () => {
           transition={{ duration: 0.3 }}
           className="lg:hidden overflow-hidden"
         >
-          <div className="py-4 space-y-2 bg-white">
+          <div className="py-4 space-y-2 bg-white border-t border-pink-100">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-orange-500 hover:text-white text-gray-700"
+                className="block w-full text-left px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-pink-500 hover:text-white text-gray-700"
               >
                 {item.name}
               </button>

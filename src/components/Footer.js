@@ -50,30 +50,30 @@ const Footer = () => {
   ];
 
   const services = [
-    "Tyre Replacement",
-    "Emergency Call-Outs",
-    "Puncture Repairs",
-    "Wheel Balancing",
-    "Mobile Service",
-    "24/7 Availability",
+    "Manicure & Pedicure",
+    "Gel & Acrylic Nails",
+    "Eyelash & Eyebrow Treatments",
+    "Waxing & Facials",
+    "Premium Beauty Services",
+    "Expert Nail Art",
   ];
 
   const socialLinks = [
     {
       icon: Facebook,
-      href: "https://facebook.com/rhiannatyres",
+      href: "https://facebook.com/ccnailsandbeauty",
       label: "Facebook",
       color: "hover:text-blue-500",
     },
     {
       icon: Instagram,
-      href: "https://instagram.com/rhiannatyres",
+      href: "https://instagram.com/ccnailsandbeauty",
       label: "Instagram",
       color: "hover:text-pink-500",
     },
     {
       icon: MessageCircle,
-      href: "https://wa.me/441234567890",
+      href: "https://wa.me/442012345678",
       label: "WhatsApp",
       color: "hover:text-green-500",
     },
@@ -94,45 +94,44 @@ const Footer = () => {
           <motion.div variants={itemVariants} className="lg:col-span-1">
             <div className="mb-6">
               <h3 className="text-2xl font-display font-bold text-white">
-                Rhianna Tyres
+                C&C Nails and Beauty
               </h3>
-              <p className="text-sm text-gray-400">Mobile Tyre Service</p>
+              <p className="text-sm text-gray-400">Professional Beauty Salon</p>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Professional mobile tyre fitting service across East London and
-              surrounding areas. Fast, reliable, and available 24/7 for all your
-              tyre needs.
+              Professional nail and beauty treatments in the heart of London.
+              From flawless nails to relaxing skincare—your beauty, our passion.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-orange-400" />
+                <Phone className="w-5 h-5 text-pink-400" />
                 <a
-                  href="tel:+441234567890"
-                  className="text-gray-300 hover:text-orange-400 transition-colors"
+                  href="tel:+442012345678"
+                  className="text-gray-300 hover:text-pink-400 transition-colors"
                 >
-                  +44 123 456 7890
+                  +44 20 1234 5678
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-orange-400" />
+                <Mail className="w-5 h-5 text-pink-400" />
                 <a
-                  href="mailto:info@rhiannatyres.com"
-                  className="text-gray-300 hover:text-orange-400 transition-colors"
+                  href="mailto:info@ccnailsandbeauty.com"
+                  className="text-gray-300 hover:text-pink-400 transition-colors"
                 >
-                  info@rhiannatyres.com
+                  info@ccnailsandbeauty.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-orange-400" />
+                <MapPin className="w-5 h-5 text-pink-400" />
                 <span className="text-gray-300">
-                  East London & Surrounding Areas
+                  123 High Street, London, UK
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <Clock className="w-5 h-5 text-orange-400" />
-                <span className="text-gray-300">24/7 Emergency Service</span>
+                <Clock className="w-5 h-5 text-pink-400" />
+                <span className="text-gray-300">Mon-Sat: 9AM-7PM</span>
               </div>
             </div>
           </motion.div>
@@ -145,7 +144,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-orange-400 transition-colors duration-300"
+                    className="text-gray-300 hover:text-pink-400 transition-colors duration-300"
                     onClick={(e) => {
                       e.preventDefault();
                       const element = document.querySelector(link.href);
@@ -173,7 +172,7 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Social & Emergency */}
+          {/* Social & Contact */}
           <motion.div variants={itemVariants}>
             <h4 className="text-lg font-bold mb-6">Connect With Us</h4>
 
@@ -195,36 +194,34 @@ const Footer = () => {
               ))}
             </div>
 
-            {/* Emergency Notice */}
-            <div className="bg-red-600/20 border border-red-500/30 rounded-lg p-4 mb-6">
-              <h5 className="font-semibold text-red-300 mb-2">
-                🚨 Emergency Service
-              </h5>
-              <p className="text-sm text-red-200 mb-3">
-                Need urgent tyre assistance? Call us now for immediate help!
-              </p>
-              <motion.a
-                href="tel:+441234567890"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
-              >
-                <Phone size={16} />
-                <span>Call Emergency</span>
-              </motion.a>
-            </div>
-
             {/* WhatsApp Quick Contact */}
             <motion.a
-              href="https://wa.me/441234567890"
+              href="https://wa.me/442012345678"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors w-full justify-center"
+              className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors w-full justify-center mb-4"
             >
               <MessageCircle size={16} />
               <span>WhatsApp Us</span>
+            </motion.a>
+
+            {/* Book Appointment */}
+            <motion.a
+              href="#contact"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center space-x-2 bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors w-full justify-center"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.querySelector("#contact");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              <span>Book Appointment</span>
             </motion.a>
           </motion.div>
         </motion.div>
@@ -236,8 +233,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-400 text-sm">
-                © 2025 Rhiannon Rhianna Mobile Tyres — Demo website by{" "}
-                <span className="text-orange-400 font-semibold">
+                © 2025 C&C Nails and Beauty — Designed by{" "}
+                <span className="text-pink-400 font-semibold">
                   Enso Digital
                 </span>
               </p>
@@ -247,7 +244,7 @@ const Footer = () => {
               <div className="flex items-center space-x-2 text-gray-400 text-sm">
                 <span>Made with</span>
                 <Heart className="w-4 h-4 text-red-500 fill-current" />
-                <span>for local businesses</span>
+                <span>for beauty</span>
               </div>
 
               {/* Back to Top Button */}
@@ -255,7 +252,7 @@ const Footer = () => {
                 onClick={scrollToTop}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-10 h-10 bg-orange-500 hover:bg-orange-600 rounded-lg flex items-center justify-center text-white transition-colors"
+                className="w-10 h-10 bg-pink-500 hover:bg-pink-600 rounded-lg flex items-center justify-center text-white transition-colors"
                 aria-label="Back to top"
               >
                 <ArrowUp size={20} />

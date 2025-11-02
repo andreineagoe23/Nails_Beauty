@@ -9,22 +9,22 @@ const FloatingCallButton = () => {
     {
       icon: Phone,
       label: "Call Now",
-      href: "tel:+441234567890",
+      href: "tel:+442012345678",
       color: "bg-green-500 hover:bg-green-600",
       delay: 0.1,
     },
     {
       icon: MessageCircle,
       label: "WhatsApp",
-      href: "https://wa.me/441234567890",
+      href: "https://wa.me/442012345678",
       color: "bg-green-600 hover:bg-green-700",
       delay: 0.2,
     },
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:info@rhiannatyres.com",
-      color: "bg-blue-500 hover:bg-blue-600",
+      href: "mailto:info@ccnailsandbeauty.com",
+      color: "bg-pink-500 hover:bg-pink-600",
       delay: 0.3,
     },
   ];
@@ -85,7 +85,7 @@ const FloatingCallButton = () => {
         className={`w-16 h-16 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 ${
           isExpanded
             ? "bg-red-500 hover:bg-red-600"
-            : "bg-orange-500 hover:bg-orange-600"
+            : "bg-pink-500 hover:bg-pink-600"
         }`}
         aria-label={
           isExpanded ? "Close contact options" : "Open contact options"
@@ -106,22 +106,10 @@ const FloatingCallButton = () => {
       {/* Pulse Animation for Main Button */}
       {!isExpanded && (
         <motion.div
-          className="absolute inset-0 rounded-full bg-orange-500"
+          className="absolute inset-0 rounded-full bg-pink-500"
           animate={{ scale: [1, 1.2, 1], opacity: [0.7, 0, 0.7] }}
           transition={{ duration: 2, repeat: Infinity }}
         />
-      )}
-
-      {/* Emergency Badge */}
-      {!isExpanded && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="absolute -top-2 -left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg"
-        >
-          24/7
-        </motion.div>
       )}
     </div>
   );

@@ -68,39 +68,43 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+44 123 456 7890", "+44 987 654 3210"],
-      action: "tel:+441234567890",
-      color: "text-green-500",
-      bgColor: "bg-green-500/10",
+      details: ["+44 20 1234 5678", "+44 20 9876 5432"],
+      action: "tel:+442012345678",
+      color: "text-pink-500",
+      bgColor: "bg-pink-100",
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@rhiannatyres.com", "emergency@rhiannatyres.com"],
-      action: "mailto:info@rhiannatyres.com",
-      color: "text-blue-500",
-      bgColor: "bg-blue-500/10",
+      details: ["info@ccnailsandbeauty.com", "bookings@ccnailsandbeauty.com"],
+      action: "mailto:info@ccnailsandbeauty.com",
+      color: "text-rose-500",
+      bgColor: "bg-rose-100",
     },
     {
       icon: MapPin,
-      title: "Service Area",
-      details: ["East London", "Surrounding Areas"],
+      title: "Visit Us",
+      details: ["123 High Street", "London, UK"],
       action: null,
-      color: "text-red-500",
-      bgColor: "bg-red-500/10",
+      color: "text-pink-600",
+      bgColor: "bg-pink-50",
     },
     {
       icon: Clock,
-      title: "Hours",
-      details: ["24/7 Emergency Service", "Mon-Fri: 8AM-6PM"],
+      title: "Business Hours",
+      details: ["Mon-Sat: 9AM-7PM", "Sun: 10AM-5PM"],
       action: null,
-      color: "text-purple-500",
-      bgColor: "bg-purple-500/10",
+      color: "text-rose-600",
+      bgColor: "bg-rose-50",
     },
   ];
 
   return (
-    <section id="contact" ref={ref} className="section-padding bg-white">
+    <section
+      id="contact"
+      ref={ref}
+      className="section-padding bg-gradient-to-b from-white to-pink-50"
+    >
       <div className="container-custom">
         <motion.div
           variants={containerVariants}
@@ -110,34 +114,31 @@ const Contact = () => {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2
-              className={`text-4xl md:text-5xl font-display font-bold mb-6 ${"text-brand-dark"}`}
-            >
-              Get in <span className="text-gradient">Touch</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gray-900">
+              Get in{" "}
+              <span className="bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
+                Touch
+              </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto mb-8"></div>
-            <p
-              className={`text-xl leading-relaxed max-w-3xl mx-auto ${"text-gray-600"}`}
-            >
-              Ready to get your tyres sorted? Contact us today for a quote or
-              emergency service. We're here to help 24/7.
+            <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto mb-8"></div>
+            <p className="text-xl leading-relaxed max-w-3xl mx-auto text-gray-600">
+              Ready to book your beauty treatment? Contact us today to schedule
+              your appointment or ask any questions. We'd love to hear from you!
             </p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
-              <div className={`p-8 rounded-3xl ${"bg-gray-50"}`}>
-                <h3 className={`text-2xl font-bold mb-6 ${"text-brand-dark"}`}>
+              <div className="p-8 rounded-3xl bg-white border border-pink-100 shadow-lg">
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">
                   Send us a Message
                 </h3>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label
-                        className={`block text-sm font-semibold mb-2 ${"text-gray-700"}`}
-                      >
+                      <label className="block text-sm font-semibold mb-2 text-gray-700">
                         Full Name *
                       </label>
                       <input
@@ -146,19 +147,13 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 ${
-                          false
-                            ? "bg-gray-700 border-gray-600 text-white focus:border-primary-500"
-                            : "bg-white border-gray-300 text-gray-900 focus:border-primary-500"
-                        }`}
+                        className="w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-pink-500 bg-white border-gray-300 text-gray-900 focus:border-pink-500"
                         placeholder="Your full name"
                       />
                     </div>
 
                     <div>
-                      <label
-                        className={`block text-sm font-semibold mb-2 ${"text-gray-700"}`}
-                      >
+                      <label className="block text-sm font-semibold mb-2 text-gray-700">
                         Email Address *
                       </label>
                       <input
@@ -167,20 +162,14 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 ${
-                          false
-                            ? "bg-gray-700 border-gray-600 text-white focus:border-primary-500"
-                            : "bg-white border-gray-300 text-gray-900 focus:border-primary-500"
-                        }`}
+                        className="w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-pink-500 bg-white border-gray-300 text-gray-900 focus:border-pink-500"
                         placeholder="your@email.com"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label
-                      className={`block text-sm font-semibold mb-2 ${"text-gray-700"}`}
-                    >
+                    <label className="block text-sm font-semibold mb-2 text-gray-700">
                       Phone Number
                     </label>
                     <input
@@ -188,19 +177,13 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 ${
-                        false
-                          ? "bg-gray-700 border-gray-600 text-white focus:border-primary-500"
-                          : "bg-white border-gray-300 text-gray-900 focus:border-primary-500"
-                      }`}
-                      placeholder="+44 123 456 7890"
+                      className="w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-pink-500 bg-white border-gray-300 text-gray-900 focus:border-pink-500"
+                      placeholder="+44 20 1234 5678"
                     />
                   </div>
 
                   <div>
-                    <label
-                      className={`block text-sm font-semibold mb-2 ${"text-gray-700"}`}
-                    >
+                    <label className="block text-sm font-semibold mb-2 text-gray-700">
                       Message *
                     </label>
                     <textarea
@@ -209,12 +192,8 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       rows={5}
-                      className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none ${
-                        false
-                          ? "bg-gray-700 border-gray-600 text-white focus:border-primary-500"
-                          : "bg-white border-gray-300 text-gray-900 focus:border-primary-500"
-                      }`}
-                      placeholder="Tell us about your tyre needs..."
+                      className="w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-pink-500 resize-none bg-white border-gray-300 text-gray-900 focus:border-pink-500"
+                      placeholder="Tell us about your beauty needs..."
                     />
                   </div>
 
@@ -222,7 +201,7 @@ const Contact = () => {
                     type="submit"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full btn-primary text-lg py-4 flex items-center justify-center space-x-3"
+                    className="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg flex items-center justify-center space-x-3"
                   >
                     <Send size={20} />
                     <span>Send Message</span>
@@ -235,8 +214,8 @@ const Contact = () => {
                       animate={{ opacity: 1, y: 0 }}
                       className={`p-4 rounded-lg flex items-center space-x-3 ${
                         formStatus === "success"
-                          ? "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-400"
-                          : "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-400"
+                          ? "bg-green-100 text-green-700"
+                          : "bg-red-100 text-red-700"
                       }`}
                     >
                       {formStatus === "success" ? (
@@ -263,28 +242,22 @@ const Contact = () => {
                   <motion.div
                     key={index}
                     whileHover={{ y: -5 }}
-                    className={`p-6 rounded-2xl transition-all duration-300 ${
-                      false
-                        ? "bg-gray-800 hover:bg-gray-700"
-                        : "bg-gray-50 hover:bg-white shadow-lg hover:shadow-xl"
-                    }`}
+                    className="p-6 rounded-2xl transition-all duration-300 bg-white hover:shadow-xl border border-pink-100"
                   >
                     <div
                       className={`w-12 h-12 ${info.bgColor} rounded-xl flex items-center justify-center mb-4`}
                     >
                       <info.icon className={`w-6 h-6 ${info.color}`} />
                     </div>
-                    <h4
-                      className={`text-lg font-bold mb-2 ${"text-brand-dark"}`}
-                    >
+                    <h4 className="text-lg font-bold mb-2 text-gray-900">
                       {info.title}
                     </h4>
                     {info.details.map((detail, detailIndex) => (
                       <p
                         key={detailIndex}
-                        className={`${"text-gray-600"} ${
+                        className={`text-gray-600 ${
                           info.action
-                            ? "hover:text-primary-500 cursor-pointer"
+                            ? "hover:text-pink-500 cursor-pointer"
                             : ""
                         }`}
                         onClick={
@@ -303,55 +276,49 @@ const Contact = () => {
               {/* WhatsApp Button */}
               <motion.div
                 whileHover={{ scale: 1.02 }}
-                className={`p-6 rounded-2xl ${
-                  false
-                    ? "bg-green-500/20 border border-green-500/30"
-                    : "bg-green-50 border border-green-200"
-                }`}
+                className="p-6 rounded-2xl bg-green-50 border border-green-200"
               >
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
                     <MessageCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4
-                      className={`text-lg font-bold mb-1 ${"text-brand-dark"}`}
-                    >
+                    <h4 className="text-lg font-bold mb-1 text-gray-900">
                       WhatsApp Us
                     </h4>
-                    <p className={`text-sm ${"text-gray-600"}`}>
+                    <p className="text-sm text-gray-600">
                       Quick response via WhatsApp
                     </p>
                   </div>
                   <motion.a
-                    href="https://wa.me/441234567890"
+                    href="https://wa.me/442012345678"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="ml-auto btn-primary text-sm px-4 py-2"
+                    className="ml-auto bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
                   >
                     Chat Now
                   </motion.a>
                 </div>
               </motion.div>
 
-              {/* Map Placeholder */}
-              <div className={`p-6 rounded-2xl ${"bg-gray-50"}`}>
-                <h4 className={`text-lg font-bold mb-4 ${"text-brand-dark"}`}>
-                  Service Area
+              {/* Google Maps Embed */}
+              <div className="p-6 rounded-2xl bg-white border border-pink-100">
+                <h4 className="text-lg font-bold mb-4 text-gray-900">
+                  Find Us
                 </h4>
-                <div
-                  className={`aspect-video rounded-lg bg-gradient-to-br from-brand-blue/20 to-brand-electric/20 flex items-center justify-center ${"bg-gray-200"}`}
-                >
-                  <div className="text-center">
-                    <MapPin
-                      className={`w-12 h-12 mx-auto mb-2 ${"text-orange-600"}`}
-                    />
-                    <p className={`${"text-gray-600"}`}>
-                      East London & Surrounding Areas
-                    </p>
-                  </div>
+                <div className="aspect-video rounded-lg bg-gray-200 flex items-center justify-center overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.0320143133816!2d-0.12775838422946787!3d51.5073513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b323093d307%3A0x2fb199016d5642a7!2sLondon!5e0!3m2!1sen!2suk!4v1234567890"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-lg"
+                  ></iframe>
                 </div>
               </div>
             </motion.div>

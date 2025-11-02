@@ -3,12 +3,10 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import {
-  Wrench,
-  Phone,
-  Shield,
-  Settings,
-  Clock,
-  MapPin,
+  Sparkles,
+  Heart,
+  Eye,
+  Scissors,
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
@@ -55,69 +53,73 @@ const Services = () => {
 
   const services = [
     {
-      icon: Wrench,
-      title: "Tyre Replacement",
+      icon: Sparkles,
+      title: "Manicure & Pedicure",
       description:
-        "Professional tyre fitting with premium brands and competitive pricing.",
+        "Expert nail care treatments for beautiful, healthy hands and feet.",
       features: [
-        "All tyre brands",
-        "Premium quality",
-        "Competitive prices",
-        "Quick fitting",
+        "Classic & gel manicures",
+        "Luxury pedicures",
+        "Nail art & design",
+        "Nail repair & care",
       ],
-      color: "text-blue-500",
-      bgColor: "bg-blue-500/10",
-      borderColor: "border-blue-500/20",
+      color: "text-pink-500",
+      bgColor: "bg-pink-100",
+      borderColor: "border-pink-200",
     },
     {
-      icon: Phone,
-      title: "Emergency Call-Outs",
+      icon: Heart,
+      title: "Gel & Acrylic Nails",
       description:
-        "24/7 emergency tyre service for breakdowns and urgent repairs.",
+        "Long-lasting nail extensions and enhancements for stunning results.",
       features: [
-        "24/7 availability",
-        "Fast response",
-        "Roadside assistance",
-        "Emergency repairs",
+        "Gel extensions",
+        "Acrylic nails",
+        "Nail strengthening",
+        "Custom designs",
       ],
-      color: "text-red-500",
-      bgColor: "bg-red-500/10",
-      borderColor: "border-red-500/20",
+      color: "text-rose-500",
+      bgColor: "bg-rose-100",
+      borderColor: "border-rose-200",
     },
     {
-      icon: Shield,
-      title: "Puncture Repairs",
+      icon: Eye,
+      title: "Eyelash & Eyebrow Treatments",
       description:
-        "Expert puncture repair service to get you back on the road safely.",
+        "Professional lash and brow services for captivating, defined features.",
       features: [
-        "Professional repair",
-        "Quality materials",
-        "Warranty included",
-        "Same-day service",
+        "Lash extensions",
+        "Brow shaping & tinting",
+        "Lash lifting",
+        "Brow microblading",
       ],
-      color: "text-green-500",
-      bgColor: "bg-green-500/10",
-      borderColor: "border-green-500/20",
+      color: "text-pink-600",
+      bgColor: "bg-pink-50",
+      borderColor: "border-pink-200",
     },
     {
-      icon: Settings,
-      title: "Wheel Balancing",
+      icon: Scissors,
+      title: "Waxing & Facials",
       description:
-        "Precision wheel balancing for smooth driving and extended tyre life.",
+        "Smooth, hair-free skin and rejuvenating facial treatments for glowing results.",
       features: [
-        "Precision balancing",
-        "Modern equipment",
-        "Extended tyre life",
-        "Smooth driving",
+        "Full body waxing",
+        "Luxury facials",
+        "Skincare treatments",
+        "Anti-aging solutions",
       ],
-      color: "text-purple-500",
-      bgColor: "bg-purple-500/10",
-      borderColor: "border-purple-500/20",
+      color: "text-rose-600",
+      bgColor: "bg-rose-50",
+      borderColor: "border-rose-200",
     },
   ];
 
   return (
-    <section id="services" ref={ref} className="section-padding bg-gray-50">
+    <section
+      id="services"
+      ref={ref}
+      className="section-padding bg-gradient-to-b from-pink-50 to-white"
+    >
       <div className="container-custom">
         <motion.div
           variants={containerVariants}
@@ -127,14 +129,16 @@ const Services = () => {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-brand-dark">
-              Our <span className="text-gradient">Services</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gray-900">
+              Our{" "}
+              <span className="bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
+                Services
+              </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto mb-8"></div>
             <p className="text-xl leading-relaxed max-w-3xl mx-auto text-gray-600">
-              Professional mobile tyre services delivered directly to your
-              location. From emergency repairs to routine maintenance, we've got
-              you covered.
+              Discover our range of premium beauty treatments designed to
+              enhance your natural beauty and boost your confidence.
             </p>
           </motion.div>
 
@@ -151,11 +155,7 @@ const Services = () => {
                   y: -10,
                   transition: { duration: 0.3 },
                 }}
-                className={`group relative overflow-hidden rounded-2xl p-8 transition-all duration-300 ${
-                  false
-                    ? "bg-gray-800 hover:bg-gray-700"
-                    : "bg-white hover:bg-gray-50 shadow-lg hover:shadow-2xl"
-                } ${service.borderColor} border-2`}
+                className={`group relative overflow-hidden rounded-2xl p-8 transition-all duration-300 bg-white hover:shadow-2xl border-2 ${service.borderColor}`}
               >
                 {/* Icon */}
                 <motion.div
@@ -166,7 +166,7 @@ const Services = () => {
                 </motion.div>
 
                 {/* Content */}
-                <h3 className={`text-2xl font-bold mb-4 ${"text-brand-dark"}`}>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">
                   {service.title}
                 </h3>
                 <p className="text-lg mb-6 text-gray-600">
@@ -208,23 +208,21 @@ const Services = () => {
           {/* Service Highlights */}
           <motion.div
             variants={itemVariants}
-            className={`rounded-3xl p-8 md:p-12`}
+            className="rounded-3xl p-8 md:p-12 bg-gradient-to-r from-pink-50 to-rose-50 border border-pink-100"
           >
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="flex flex-col items-center"
               >
-                <div
-                  className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${"bg-orange-500/20"}`}
-                >
-                  <Clock className={`w-8 h-8 ${"text-orange-600"}`} />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 bg-pink-100">
+                  <Sparkles className="w-8 h-8 text-pink-600" />
                 </div>
-                <h4 className={`text-xl font-bold mb-2 ${"text-brand-dark"}`}>
-                  Quick Response
+                <h4 className="text-xl font-bold mb-2 text-gray-900">
+                  Premium Products
                 </h4>
                 <p className="text-gray-600">
-                  Average response time of 30 minutes
+                  Only the finest quality beauty products
                 </p>
               </motion.div>
 
@@ -232,16 +230,14 @@ const Services = () => {
                 whileHover={{ scale: 1.05 }}
                 className="flex flex-col items-center"
               >
-                <div
-                  className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${"bg-orange-500/20"}`}
-                >
-                  <MapPin className={`w-8 h-8 ${"text-orange-600"}`} />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 bg-pink-100">
+                  <Heart className="w-8 h-8 text-pink-600" />
                 </div>
-                <h4 className={`text-xl font-bold mb-2 ${"text-brand-dark"}`}>
-                  Wide Coverage
+                <h4 className="text-xl font-bold mb-2 text-gray-900">
+                  Expert Care
                 </h4>
                 <p className="text-gray-600">
-                  Serving East London and surrounding areas
+                  Professional treatments with personal attention
                 </p>
               </motion.div>
 
@@ -249,16 +245,14 @@ const Services = () => {
                 whileHover={{ scale: 1.05 }}
                 className="flex flex-col items-center"
               >
-                <div
-                  className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${"bg-orange-500/20"}`}
-                >
-                  <Shield className={`w-8 h-8 ${"text-orange-600"}`} />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 bg-pink-100">
+                  <CheckCircle className="w-8 h-8 text-pink-600" />
                 </div>
-                <h4 className={`text-xl font-bold mb-2 ${"text-brand-dark"}`}>
-                  Fully Insured
+                <h4 className="text-xl font-bold mb-2 text-gray-900">
+                  Satisfaction Guaranteed
                 </h4>
                 <p className="text-gray-600">
-                  Licensed and insured for your peace of mind
+                  Your happiness is our top priority
                 </p>
               </motion.div>
             </div>

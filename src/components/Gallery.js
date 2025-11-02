@@ -6,9 +6,10 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
-  Camera,
-  Wrench,
-  Truck,
+  Sparkles,
+  Heart,
+  Eye,
+  Scissors,
 } from "lucide-react";
 
 const Gallery = () => {
@@ -51,65 +52,66 @@ const Gallery = () => {
     },
   };
 
-  // Gallery images with placeholders
+  // Gallery images with beauty salon themes
   const galleryImages = [
     {
       id: 1,
-      title: "Mobile Tyre Van",
-      description: "Our fully equipped mobile tyre service van",
-      category: "vehicle",
-      icon: Truck,
-      gradient: "from-blue-500 to-blue-700",
+      title: "Elegant Nail Art",
+      description: "Stunning nail designs and gel extensions",
+      category: "nails",
+      icon: Sparkles,
+      gradient: "from-pink-400 to-pink-600",
     },
     {
       id: 2,
-      title: "Professional Service",
-      description: "Expert technician at work",
-      category: "service",
-      icon: Wrench,
-      gradient: "from-green-500 to-green-700",
+      title: "Salon Interior",
+      description: "Beautiful, relaxing salon environment",
+      category: "salon",
+      icon: Heart,
+      gradient: "from-rose-400 to-rose-600",
     },
     {
       id: 3,
-      title: "Quality Tyres",
-      description: "Premium tyre brands and quality service",
-      category: "tyres",
-      icon: Camera,
-      gradient: "from-purple-500 to-purple-700",
+      title: "Manicure Treatment",
+      description: "Premium nail care and treatments",
+      category: "treatment",
+      icon: Sparkles,
+      gradient: "from-pink-500 to-rose-500",
     },
     {
       id: 4,
-      title: "Emergency Call-Out",
-      description: "24/7 emergency roadside assistance",
-      category: "emergency",
-      icon: Truck,
-      gradient: "from-red-500 to-red-700",
+      title: "Lash Extensions",
+      description: "Professional eyelash extension services",
+      category: "lashes",
+      icon: Eye,
+      gradient: "from-rose-400 to-pink-500",
     },
     {
       id: 5,
-      title: "Customer Service",
-      description: "Friendly and professional customer care",
-      category: "service",
-      icon: Wrench,
-      gradient: "from-yellow-500 to-orange-500",
+      title: "Facial Treatment",
+      description: "Luxury skincare and facial services",
+      category: "facial",
+      icon: Heart,
+      gradient: "from-pink-300 to-rose-400",
     },
     {
       id: 6,
-      title: "Modern Equipment",
-      description: "State-of-the-art tyre fitting equipment",
-      category: "equipment",
-      icon: Camera,
-      gradient: "from-indigo-500 to-indigo-700",
+      title: "Eyebrow Shaping",
+      description: "Expert brow shaping and tinting",
+      category: "brows",
+      icon: Scissors,
+      gradient: "from-rose-500 to-pink-600",
     },
   ];
 
   const categories = [
     "All",
-    "vehicle",
-    "service",
-    "tyres",
-    "emergency",
-    "equipment",
+    "nails",
+    "salon",
+    "treatment",
+    "lashes",
+    "facial",
+    "brows",
   ];
   const [activeCategory, setActiveCategory] = useState("All");
 
@@ -143,7 +145,7 @@ const Gallery = () => {
   };
 
   return (
-    <section id="gallery" ref={ref} className="section-padding bg-gray-50">
+    <section id="gallery" ref={ref} className="section-padding bg-white">
       <div className="container-custom">
         <motion.div
           variants={containerVariants}
@@ -153,18 +155,17 @@ const Gallery = () => {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2
-              className={`text-4xl md:text-5xl font-display font-bold mb-6 ${"text-brand-dark"}`}
-            >
-              Our Work in <span className="text-gradient">Action</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gray-900">
+              Our{" "}
+              <span className="bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
+                Gallery
+              </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto mb-8"></div>
-            <p
-              className={`text-xl leading-relaxed max-w-3xl mx-auto ${"text-gray-600"}`}
-            >
-              See our professional mobile tyre service in action. From emergency
-              call-outs to routine maintenance, we deliver quality service
-              wherever you are.
+            <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto mb-8"></div>
+            <p className="text-xl leading-relaxed max-w-3xl mx-auto text-gray-600">
+              Explore our beautiful salon, stunning nail art, and premium beauty
+              treatments. See the artistry and attention to detail that sets us
+              apart.
             </p>
           </motion.div>
 
@@ -181,10 +182,8 @@ const Gallery = () => {
                 onClick={() => setActiveCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   activeCategory === category
-                    ? "bg-primary-500 text-white shadow-lg"
-                    : false
-                    ? "bg-gray-800 text-gray-300 hover:bg-gray-700"
-                    : "bg-white text-gray-600 hover:bg-gray-100 shadow-md"
+                    ? "bg-pink-500 text-white shadow-lg"
+                    : "bg-white text-gray-600 hover:bg-pink-50 shadow-md border border-pink-100"
                 }`}
               >
                 {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -208,11 +207,7 @@ const Gallery = () => {
                   layout
                   whileHover={{ y: -10 }}
                   onClick={() => openModal(image)}
-                  className={`group relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-300 ${
-                    false
-                      ? "bg-gray-800 hover:bg-gray-700"
-                      : "bg-white hover:bg-gray-50 shadow-lg hover:shadow-2xl"
-                  }`}
+                  className="group relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-300 bg-white hover:shadow-2xl"
                 >
                   {/* Image Placeholder */}
                   <div
@@ -247,24 +242,20 @@ const Gallery = () => {
             className="mt-20 grid md:grid-cols-4 gap-8 text-center"
           >
             {[
-              { number: "1000+", label: "Services Completed" },
-              { number: "24/7", label: "Emergency Availability" },
-              { number: "50+", label: "Areas Covered" },
+              { number: "1000+", label: "Happy Clients" },
+              { number: "10+", label: "Years Experience" },
+              { number: "50+", label: "Services Offered" },
               { number: "5★", label: "Customer Rating" },
             ].map((stat, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
-                className={`p-6 rounded-2xl ${
-                  false
-                    ? "bg-gray-800 hover:bg-gray-700"
-                    : "bg-white hover:bg-gray-50 shadow-lg hover:shadow-xl"
-                } transition-all duration-300`}
+                className="p-6 rounded-2xl bg-gradient-to-br from-pink-50 to-rose-50 hover:shadow-xl border border-pink-100 transition-all duration-300"
               >
-                <div className={`text-3xl font-bold mb-2 ${"text-orange-600"}`}>
+                <div className="text-3xl font-bold mb-2 text-pink-600">
                   {stat.number}
                 </div>
-                <div className={`text-lg ${"text-gray-600"}`}>{stat.label}</div>
+                <div className="text-lg text-gray-600">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -323,10 +314,10 @@ const Gallery = () => {
 
               {/* Content */}
               <div className="p-6 bg-white">
-                <h3 className="text-2xl font-bold mb-2 text-brand-dark">
+                <h3 className="text-2xl font-bold mb-2 text-gray-900">
                   {selectedImage.title}
                 </h3>
-                <p className={`text-lg ${"text-gray-600"}`}>
+                <p className="text-lg text-gray-600">
                   {selectedImage.description}
                 </p>
               </div>
