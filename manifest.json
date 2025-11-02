@@ -1,6 +1,6 @@
 {
-  "short_name": "Rhianna Tyres",
-  "name": "Rhiannon Rhianna Mobile Tyres",
+  "short_name": "C&C Nails and Beauty",
+  "name": "C&C Nails and Beauty - Professional Beauty Salon",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ec4899",
+  "background_color": "#fef9f3"
 }
