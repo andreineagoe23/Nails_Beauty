@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/RhiannaTyres/static/css/main.96a1c13e.css",
-    "main.js": "/RhiannaTyres/static/js/main.1a65d77a.js",
-    "index.html": "/RhiannaTyres/index.html",
-    "main.96a1c13e.css.map": "/RhiannaTyres/static/css/main.96a1c13e.css.map",
-    "main.1a65d77a.js.map": "/RhiannaTyres/static/js/main.1a65d77a.js.map"
+    "main.css": "/Nails_Beauty/static/css/main.bec6bbce.css",
+    "main.js": "/Nails_Beauty/static/js/main.9921f29b.js",
+    "index.html": "/Nails_Beauty/index.html",
+    "main.bec6bbce.css.map": "/Nails_Beauty/static/css/main.bec6bbce.css.map",
+    "main.9921f29b.js.map": "/Nails_Beauty/static/js/main.9921f29b.js.map"
   },
   "entrypoints": [
-    "static/css/main.96a1c13e.css",
-    "static/js/main.1a65d77a.js"
+    "static/css/main.bec6bbce.css",
+    "static/js/main.9921f29b.js"
   ]
 }
