@@ -318,6 +318,7 @@ const Contact = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="rounded-lg"
+                    title="C&C Nails and Beauty Location - London, UK"
                   ></iframe>
                 </div>
               </div>

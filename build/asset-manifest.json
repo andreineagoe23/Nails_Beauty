@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Nails_Beauty/static/css/main.bec6bbce.css",
-    "main.js": "/Nails_Beauty/static/js/main.9921f29b.js",
+    "main.css": "/Nails_Beauty/static/css/main.bf35fe54.css",
+    "main.js": "/Nails_Beauty/static/js/main.0f19891b.js",
     "index.html": "/Nails_Beauty/index.html",
-    "main.bec6bbce.css.map": "/Nails_Beauty/static/css/main.bec6bbce.css.map",
-    "main.9921f29b.js.map": "/Nails_Beauty/static/js/main.9921f29b.js.map"
+    "main.bf35fe54.css.map": "/Nails_Beauty/static/css/main.bf35fe54.css.map",
+    "main.0f19891b.js.map": "/Nails_Beauty/static/js/main.0f19891b.js.map"
   },
   "entrypoints": [
-    "static/css/main.bec6bbce.css",
-    "static/js/main.9921f29b.js"
+    "static/css/main.bf35fe54.css",
+    "static/js/main.0f19891b.js"
   ]
 }
